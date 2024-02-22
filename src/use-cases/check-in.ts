@@ -13,7 +13,7 @@ interface CheckInUseCaseRequest {
   userLongitude: number
 }
 
-interface CheckInUseUseCaseResponse {
+interface CheckInUseCaseResponse {
   checkIn: CheckIn
 }
 
@@ -28,7 +28,7 @@ export class CheckInUseCase {
     gymId,
     userLatitude,
     userLongitude,
-  }: CheckInUseCaseRequest): Promise<CheckInUseUseCaseResponse> {
+  }: CheckInUseCaseRequest): Promise<CheckInUseCaseResponse> {
     const gym = await this.gymRepository.findById(gymId)
 
     if (!gym) {
